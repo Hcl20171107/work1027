@@ -86,6 +86,11 @@ class ViewController: UIViewController {
             result.text = "\(temp)"
         }
     }
+    @IBAction func buttonMinus(_ sender: Any) {
+            temp = Double(result.text!)!
+            temp = Double(result.text!)! * -1
+            result.text = "\(temp)"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
