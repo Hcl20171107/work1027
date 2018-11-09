@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBAction func button1(_ sender: Any) {
         result.text = result.text! + "1"
     }
-    @IBAction func button2(_ sender: Any) {
+    @IBAction func button2(_ sender: Any){
         result.text = result.text! + "2"
     }
     @IBAction func button3(_ sender: Any) {
@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         temp = Double(result.text!)!
         result.text = ""
     }
+
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
     }
@@ -85,11 +86,40 @@ class ViewController: UIViewController {
             temp = temp / Double(result.text!)!
             result.text = "\(temp)"
         }
+        
     }
     @IBAction func buttonMinus(_ sender: Any) {
             temp = Double(result.text!)!
             temp = Double(result.text!)! * -1
             result.text = "\(temp)"
+    }
+    @IBAction func buttonDelete(_ sender: Any) {
+        var ttemp: String = result.text!
+        let pp: Int = ttemp.characters.count - 1
+        if ttemp == ""
+        {
+            
+        }
+        else
+        {
+            ttemp = ttemp.substring(to:ttemp.index(ttemp.startIndex, offsetBy: pp))
+        }
+        result.text = ttemp
+    }
+    @IBAction func buttonSqrt(_ sender: Any) {
+        temp = Double(result.text!)!
+        temp = sqrt(Double(result.text!)!)
+        result.text = "\(temp)"
+    }
+    @IBAction func buttonSin(_ sender: Any) {
+        temp = Double(result.text!)!
+        temp = sin(Double(result.text!)!)
+        result.text = "\(temp)"
+    }
+    @IBAction func buttonCos(_ sender: Any) {
+        temp = Double(result.text!)!
+        temp = cos(Double(result.text!)!)
+        result.text = "\(temp)"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
