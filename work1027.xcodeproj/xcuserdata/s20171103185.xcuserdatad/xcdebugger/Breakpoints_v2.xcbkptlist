@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "work1027/ViewController.swift"
-            timestampString = "565666651.767818"
+            timestampString = "566485311.86877"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
-            landmarkName = "buttonResult(_:)"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "buttonPoint(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "work1027/ViewController.swift"
-            timestampString = "565666651.768347"
+            timestampString = "566485311.869554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "buttonResult(_:)"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "buttonPoint(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

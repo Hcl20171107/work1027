@@ -7,16 +7,17 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
     var temp:Double = 0
     var ttemp:Double = 0
-    var operatorFlag = 0
+    var operatorFlag:Int = 0
     var re = 0
     var judge = 0
     var freguency = 0
-    var limit: Double = 0
     var a = 0
+    var limit1:Int = 0
+    var limit2:Int = 0
+    var wait:Int = 0
     @IBOutlet weak var result: UITextField!
     @IBAction func button1(_ sender: Any) {
         if re == 1{
@@ -120,7 +121,6 @@ class ViewController: UIViewController {
         }
         else{
             result.text = result.text! + "8"
-            
         }
     }
     @IBAction func button9(_ sender: Any) {
@@ -169,6 +169,12 @@ class ViewController: UIViewController {
             result.text = "0"
             re = 1
         }
+        else if operatorFlag == 2 {
+            temp = temp - Double(result.text!)!
+            result.text = "\(temp)"
+            a = 1
+            operatorFlag = 1
+        }
         else if operatorFlag == 1{
             temp = temp + Double(result.text!)!
             result.text = "\(temp)"
@@ -185,7 +191,13 @@ class ViewController: UIViewController {
             result.text = "0"
             re = 1
         }
-        else if operatorFlag == 2{
+        else if operatorFlag == 1{
+            temp = temp + Double(result.text!)!
+            result.text = "\(temp)"
+            a = 1
+            operatorFlag = 2
+        }
+        else if operatorFlag == 2 {
             temp = temp - Double(result.text!)!
             result.text = "\(temp)"
             a = 1
@@ -202,6 +214,12 @@ class ViewController: UIViewController {
             result.text = "0"
             re = 1
         }
+        else if operatorFlag == 4{
+            temp = temp / Double(result.text!)!
+            result.text = "\(temp)"
+            a = 1
+            operatorFlag = 3
+        }
         else if operatorFlag == 3{
             temp = temp * Double(result.text!)!
             result.text = "\(temp)"
@@ -217,6 +235,12 @@ class ViewController: UIViewController {
         if result.text == ""{
             result.text = "0"
             re = 1
+        }
+        else if operatorFlag == 3{
+            temp = temp * Double(result.text!)!
+            result.text = "\(temp)"
+            a = 1
+            operatorFlag = 4
         }
         else if operatorFlag == 4{
             temp = temp / Double(result.text!)!
@@ -243,10 +267,6 @@ class ViewController: UIViewController {
         if result.text == ""{
             result.text = "0"
         }
-      //  else if a == 1{
-        //    temp = Double(result.text!)!
-          //  result.text = "\(temp)"
-        //}
         else{
             if operatorFlag == 1{
                 temp = temp + Double(result.text!)!
@@ -310,7 +330,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
-
